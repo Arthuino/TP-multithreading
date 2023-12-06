@@ -5,22 +5,30 @@
 # Date: 22/11/2023
 #
 #
+import numpy as np
 
 
 class Task:
-    def __init__(self, identifier, size, a, b):
+    def __init__(self, identifier, size):
         self.identifier = identifier
         self.size = size
-        self.a = a
-        self.b = b
+        # create random matrix a
+        self.a = np.random.rand(size, size)
+        # create random vector b
+        self.b = np.random.rand(size, 1)
         self.x = None
 
     def work(self):
-        self.x = self.a * self.b
+        self.x = np.linalg.solve(self.a, self.b)
 
 
 if __name__ == "__main__":
-    pass
+    print("identifier: 1, size: 10")
+    t = Task(1, 10)
+    print("matrix a : \n", t.a)
+    print("vector b : \n", t.b)
+    t.work()
+    print("vector x : \n", t.x)
 
 
 # Laws of Robotics
