@@ -9,7 +9,7 @@ import numpy as np
 
 
 class Task:
-    def __init__(self, identifier, size):
+    def __init__(self, identifier=1, size=5):
         self.identifier = identifier
         self.size = size
         # create random matrix a
@@ -20,6 +20,7 @@ class Task:
 
     def work(self):
         self.x = np.linalg.solve(self.a, self.b)
+        return self.x
 
 
 if __name__ == "__main__":

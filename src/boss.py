@@ -7,10 +7,11 @@
 
 
 from queueClient import QueueClient
+from task import Task
 
 
 class Boss(QueueClient):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
 
     def add_task(self, task):
@@ -19,8 +20,4 @@ class Boss(QueueClient):
 
 if __name__ == "__main__":
     boss = Boss()
-    boss.add_task("Hello")
-    boss.add_task("World")
-    boss.add_task("!")
-    boss.add_task("!")
-    boss.add_task("!")
+    boss.add_task(Task(1, 5))
