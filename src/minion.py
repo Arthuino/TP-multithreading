@@ -14,6 +14,8 @@ class Minion(QueueClient):
     def do_tasks(self):
         while True:
             task = self.task_queue.get()
+            if task is None:
+                break
             x = task.work()
             print(x)
             self.result_queue.put(x)
