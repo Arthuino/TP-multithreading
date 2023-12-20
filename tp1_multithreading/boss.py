@@ -7,7 +7,6 @@
 
 
 import numpy as np
-
 from queueClient import QueueClient
 from task import Task
 

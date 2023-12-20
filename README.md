@@ -9,26 +9,30 @@ On utilise pour ça un manager de la lib multiprocessing.
 
 ## Utilisation
 
+### Partie Python
+
 Lancer le manager:
 
 ```bash
-python3 src/queueManager.py
+python3 queueManager.py
 ```
 
 Lancer un minion qui va effectuer la tache sur un thread:
 
 ```bash
-python3 src/minion.py
+python3 minion.py
 ```
 
 Lancer un boss qui va envoier une tache à effectuer pour les minions:
 
 ```bash
-python3 src/boss.py
+python3 boss.py
 ```
 
 Pour les tests unitaires:
 
 ```bash
-python3 -m unittest discover -s test
+python3 test_task.py
 ```
+
+### Partie C++
