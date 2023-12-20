@@ -3,7 +3,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from json import dumps
 
-from manager import QueueClient
+from queueClient import QueueClient
 from task import Task
 
 
@@ -23,7 +23,7 @@ class Proxy(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        content_length = int(self.headers.get("content-length"))
+        content_length = int(self.headers.get("content-length"))  # type: ignore
         content = self.rfile.read(content_length)
         t = Task.from_json(content.decode())
         t = self.client.result_queue.put(t)

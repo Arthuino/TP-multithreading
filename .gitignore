@@ -1,3 +1,12 @@
+
+# environement
 .venv
-doc/**
+# ide
+
 *.pyc
+
+# C++
+build
+
+# autres
+doc/**
