@@ -82,6 +82,7 @@ if __name__ == "__main__":
     task = Task(a, b)
     print(task)
     s_json = task.to_json()
+    print(s_json)
     task2 = Task.from_json(s_json)
     print(task2)
 
