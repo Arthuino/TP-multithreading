@@ -26,3 +26,9 @@ Lancer un boss qui va envoier une tache à effectuer pour les minions:
 ```bash
 python3 src/boss.py
 ```
+
+Pour les tests unitaires:
+
+```bash
+python3 -m unittest discover -s test
+```
