@@ -62,3 +62,17 @@ Pour lancer le client C++:
 ```bash
 ./build/low_level
 ```
+
+## Évaluation
+
+### Programme d'évaluation
+
+Le programme benchmark.py permet de tester une "configuration", c'est à dire un certains nombre de minion py ou c++ avec un certain parametrage.
+
+```bash
+python3 tp1_multithreading/benchmark.py
+```
+
+| Type/Nombre de minion | Taille de matrice | Temps d'exécution |
+| --------------------- | ----------------- | ----------------- |
+| 1 Python              | 3000              |                   |
