@@ -14,11 +14,13 @@ class Minion(QueueClient):
     def do_tasks(self):
         while True:
             task = self.task_queue.get()
+            print("Got task")
             if task is None:
                 break
             x = task.work()
             print(x)
-            self.result_queue.put(x)
+            self.result_queue.put(task)
+            print("Put task")
 
 
 if __name__ == "__main__":
