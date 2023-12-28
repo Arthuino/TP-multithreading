@@ -73,6 +73,9 @@ Le programme benchmark.py permet de tester une "configuration", c'est à dire un
 python3 tp1_multithreading/benchmark.py
 ```
 
-| Type/Nombre de minion | Taille de matrice | Temps d'exécution |
-| --------------------- | ----------------- | ----------------- |
-| 1 Python              | 3000              |                   |
+| Type de minion        | Temps d'execution |
+| --------------------- | ----------------- |
+| Python                | ![Temps d'execution en fonction du temps pour un minion Python](data/py_minon.jpeg "")       |
+| C++  Debug 1 Thread   | ![Temps d'execution en fonction du temps pour un minion C++](data/cpp_minon_debug_1t.jpg "") |
+| C++  Release          | ![Temps d'execution en fonction du temps pour un minion C++](data/cpp_minon_release.jpg "") |
+| C++  Release + O3     | ![Temps d'execution en fonction du temps pour un minion C++](data/cpp_minon_o3.jpg "")      |

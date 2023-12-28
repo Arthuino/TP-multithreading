@@ -35,16 +35,34 @@ if __name__ == "__main__":
     a, b = createMatrices(100)
 
     allres = list()
-    allsizes = [100, 300, 500, 800, 1000, 1500, 2000, 2500, 3000, 3500]
+    allsizes = [
+        100,
+        300,
+        500,
+        800,
+        1000,
+        1500,
+        2000,
+        2500,
+        3000,
+        3500,
+        4000,
+        5000,
+        6000,
+        7000,
+        8000,
+        9000,
+        10000,
+    ]
 
     for size in allsizes:
         res = testMatrixSize(boss, 5, size)
-        printRes(res, 100)
+        printRes(res, size)
         allres.append(np.mean(res))
 
     # Plot results
     plt.figure()
     plt.plot(allsizes, allres)
     plt.xlabel("Matrix size")
-    plt.ylabel("Execution time")
+    plt.ylabel("Execution time (s)")
     plt.show()
